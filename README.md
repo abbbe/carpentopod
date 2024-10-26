@@ -5,7 +5,8 @@ As you will see below, I have focused mostly on the mechanical side of, not the 
 
 At this point as I have no particular plans to continue with this project. If you found this design entertaining or useful, I will be happy to hear about it. Feel free to contact me if you have any questions.
 
-It goes without saying all the credits go to Giliam. If you are going to commercialise the idea, do contact him. 
+It goes without saying all the credits go to Giliam. If you are going to commercialise the idea, do contact him.
+
 # Released Content
 And as far as any intellectual property (accidentally) created by me goes -- I am licensing it away under two very strict conditions:
 1. you put a star to this Github repo,
@@ -16,7 +17,7 @@ The STEP files are here: [Fusion 360 models](https://github.com/abbbe/carpentopo
 The printable files 3MF files are here: [Printable 3MF files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF).
 You can play with 3D render of the model here on [Autodesk site](https://a360.co/3A7hhCD).
 
-I have also uploaded a short video clip of the thing walking (back and forth) on YouTube []here(https://youtu.be/CmKUDVRABEs).
+I have also uploaded a short video clip of the thing walking (back and forth) on YouTube [here](https://youtu.be/CmKUDVRABEs).
 
 # Design
 ## Linkage
