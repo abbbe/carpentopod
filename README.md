@@ -20,46 +20,46 @@ I have also uploaded a short video clip of the thing walking (back and forth) on
 # Design
 ## Linkage
 I have turned the original linkage diagram black and white for easier printing and named each joint.
-![[images/Pasted image 20241026052440.png]]
+![Alt text](images/Pasted image 20241026052440.png)
 ## Legs
 The first part I designed was a leg. I have made an attempt to parameterise the design. I was not obvious what units Giliam's diagram used exactly, so I have included a scaling factor which I can tune size the model for my printer.
-![[images/Pasted image 20241026052941.png]]
+![Alt text](images/Pasted image 20241026052941.png)
 
 Unfortunately, I could find no way to share parameters between designs in Fusion 360. So some of these values ended up being copy-pasted into other designs. If you know how to do this properly, please tell me.
 
 The design is as simplistic as it gets, I have made no attempt to replicate beautiful curves of Carpentopod's legs. Here is another view without the top plates:
-![[images/Pasted image 20241026053241.png]]
+![Alt text](images/Pasted image 20241026053241.png)
 
 To keep things 3D-printable I had to make a separate spacer:
-![[images/Pasted image 20241026053802.png]]
+![Alt text](images/Pasted image 20241026053802.png)
 I have randomly chosen the thickness of the larger levers (AE, BD) to be 10mm. It means levers CH and FH became 2.5mm thick (there was no spacing in between the levers, but there is spacing between the yellow levers and the red plates). This turned out to be a bad choice, because when I 3D-printed it using normal 0.20 layer height, the slicer makes it slightly bigger, something like 2.60. Not a big deal as such, but 4 levers stacked together (combined with other artefacts of 3D printing process) became too thick. I worked around this issue by printing using 0.16mm layer height. 
 ## Leg Pair + Frame and Crank
 Next I have put together a pair of legs.
-![[images/Pasted image 20241026053454.png]]
+![Alt text](images/Pasted image 20241026053454.png)
 H1-H1 joint is connecting H joints of the legs. Other joints you see on the picture is my way to help stacking the leg pairs later down the road. There is another design included into this file called Frame and Crank. Left, Right and Crank joints link the pair of legs to corresponding sketch points of that design.
 ## Frame and Crank
 I have made a separate design file in attempt to work around lack of shared parameters in Fusion. It includes two sketches and no bodies.
 
 Left, right and bottom circle on Frame sketch are the horizontal M8 rods which link the whole thing together. I have actually had another rod on the top, but eventually dropped it. The central circle is the motor shaft (point I).
-![[images/Pasted image 20241026054927.png]]
+![Alt text](images/Pasted image 20241026054927.png)
 The Crank sketch contains a circle positioned same place as the central circle (I) on the frame. Another circle is point H, which turns around point I.
-![[images/Pasted image 20241026055336.png]]
+![Alt text](images/Pasted image 20241026055336.png)
 
 This Frame and Crank design file is included into other design files. Unfortunately at some point I have edited the this design without properly updating other design files. If I do it now things fall apart. I am not sure how this problem can be resolved.
 ## Gearbox and Frame
 Next design file includes the motor and a large plate to fix it on. I have used [OpenQDD v1 actuators](https://www.aaedmusa.com/projects/openqdd) designed by Aaed Musa (slightly adapted to use MKS ODrive Mini). These mighty things are probably overkill for this project, but I have just built a pair and had no better use for it yet.
 
-![[images/Pasted image 20241026060032.png]]
+![Alt text](images/Pasted image 20241026060032.png)
 ## Crank
 And here comes probably the most complicated part of my design, the crankshaft. I have spent probably a week trying to figure it out, then printed something rather ugly survived just long enough to allow me to come up with rather nice design I think. It  consists of just 3 unique elements.
 
 Two **RadialCrankShaft**. One will be combined with the motor output in the next design. Another is meant to be glued with a little lever which plugs into a ball bearing on the outer plate.
-![[images/Pasted image 20241026061138.png]]
+![Alt text](images/Pasted image 20241026061138.png)
 
 Four **ChordHalfCrank** pieces, which are glued together back to back to make two components.
-![[images/Pasted image 20241026061449.png]]
+![Alt text](images/Pasted image 20241026061449.png)
 
-Six inserts. ![[images/Pasted image 20241026061626.png]]
+Six inserts. ![Alt text](images/Pasted image 20241026061626.png)
 
 I was not sure if plastic will be strong enough, so I have chosen 8mm square shafts. I figured I can just use metal rods from any DIY store if 3D printed parts do not hold.
 
@@ -67,7 +67,7 @@ Originally the shaft were in this design too, but the length of the two of the s
 ## Six Legs
 
 Finally, all of the above are assembled together:
-![[images/Pasted image 20241026060822.png]]
+![Alt text](images/Pasted image 20241026060822.png)
 
 I used M8 rods with nuts and washers to keep the whole thing together. They are 250mm long in this design, but in the physical world they are 500mm. Not all fasteners are included into Fusion 360 project, see the pictures/videos of the assembled contraption for finer details.
 
@@ -75,14 +75,14 @@ There is another dumb green plate. I was thinking about redoing them in black wi
 
 You can also see a bunch of black PLA spacers. There are also some inserts, rendered transparent red acrylic, but actually printed in grey PETG.
 
-![[images/Pasted image 20241026064713.png]]
+![Alt text](images/Pasted image 20241026064713.png)
 
-The piece which gets attached to the motor is called CombinedDriveCrank. It is a combination of RadialCrank (from previous design) and DriveCrank component. If you regenerate 3MF files note that you only need to export the combined part. ![[images/Pasted image 20241026071920.png]]
+The piece which gets attached to the motor is called CombinedDriveCrank. It is a combination of RadialCrank (from previous design) and DriveCrank component. If you regenerate 3MF files note that you only need to export the combined part. ![Alt text](images/Pasted image 20241026071920.png)
 **Note the hole on the elevated part of this element is larger than two other M3 holes. It was mean to accommodate a head of M3 screw. It has turned out to be too small for my screw. Consider resizing it to 6mm or something.**
 
 ## Full Assembly
 And here are just two halves joined together.
-![[images/Pasted image 20241026064947.png]]
+![Alt text](images/Pasted image 20241026064947.png)
 
 ## Design Files
 All the design files are published in in STP/ folder:
@@ -118,7 +118,7 @@ STP files for OpenQDD v1 are published on [Aaed Musa website](https://www.aaedmu
 
 **If you print in 0.20mm it will not fit nicely (see explanations above).** 0.16mm layer height worked for me just fine. Settings in the 3MF file I publish are blend of "0.16mm Optimal" and "0.20 Strength" profiles.
 
-![[images/Pasted image 20241026070153.png]]
+![Alt text](images/Pasted image 20241026070153.png)
 
 ## Leg Plates
 "Leg Plates PLA RED.3mf" also gives you 3 pairs of legs. I printed it in Bambu PLA Basic Red using standard "0.20 Strength" profile with random seams.
@@ -126,39 +126,39 @@ STP files for OpenQDD v1 are published on [Aaed Musa website](https://www.aaedmu
 Coulpe remarks:
 * Plate 01 is packed rather tight. It prints just fine on my X1C, but you better remove [Shifty](https://makerworld.com/en/models/83480#profileId-89128)
 * I am not sure if orientation of parts on plate 03 is correct. If you care about the texture of the finished part - print one and see for yourself.
-![[images/Pasted image 20241026070519.png]]
+![Alt text](images/Pasted image 20241026070519.png)
 
 ## The crankshaft
 "Crank PURPLE PLA-CF.3mf" was printed in purple Bambu PLA-CF, using default "0.20 Strength" profile with random seams and 100% infill.
-![[images/Pasted image 20241026071620.png]]
+![Alt text](images/Pasted image 20241026071620.png)
 
 ## Spacers
 
 "Spacers PLA BLACK.3mf" - probably the least critical element of the design. Printed in "0.20 Standard" process using black Bambu PLA Basic.
-![[images/Pasted image 20241026072527.png]]
+![Alt text](images/Pasted image 20241026072527.png)
 
 When assembling you will be using two smaller spacer back to back in between the leg pairs. Next iteration of the design should probably have them merged to reduce number of parts.
 
 ## Inserts
 "Inserts PETG-HF GREY.3mf" - printed in Bambu PETG-HF using default "0.20 Strength" process with random seams.
 
-![[images/Pasted image 20241026072942.png]]
+![Alt text](images/Pasted image 20241026072942.png)
 
 ## Green Plates
 "Outer Plate PLA GREEN.3mf" and " Gearbox Frame PLA GREEN.3mf" are the elements I am the least proud of. Printed in green Bambu PLA Basic using default "0.20 Strength" process with random seams.
-![[images/Pasted image 20241026073717.png]]
+![Alt text](images/Pasted image 20241026073717.png)
 
-![[images/Pasted image 20241026111514.png]]
+![Alt text](images/Pasted image 20241026111514.png)
 
 # Assembly
 The assembly process is rather straightforward. I have started documenting it towards the end of the project and only made photos of the assembly of one half. Please forgive the not so clean background.
 ### Preparation
 Here we have a bunch of 3D printed parts:
-![[images/Pasted image 20241026113001.png]]
+![Alt text](images/Pasted image 20241026113001.png)
 Some weird optical illusion make the photo appear trapezoid, but it is a rectangle I swear ;).
 
 They will go to into a half-assembled contraption.
-![[images/Pasted image 20241026112930.png]]
+![Alt text](images/Pasted image 20241026112930.png)
 
 Above you can see the motors are mounted on the frames and 3x 500mm M8 rods. On top of this I will use a handful of fasteners:
 * 12x M8 regular nuts,
@@ -174,7 +174,7 @@ You will also need:
 * deburring tool and 8mm drill bit.
 
 You might also want to print yourself a little tool to quickly move M8 nuts down the rods. I have made it for the very first iteration of the design which included an unhealthy amount of M8 nuts, but it is handy for assembly of this version too. Mine is printed in polycarbonate (just because I had a spool attached to the printer at that moment). But PLA should work just fine.
-![[images/Pasted image 20241026114257.png]]
+![Alt text](images/Pasted image 20241026114257.png)
 
 You will want to debur the holes in the yellow levers to the point they rotate nicely. In my case something went wrong with the yellow PLA levers and I had to do a lot of deburring and even use 8mm drill bit to enlarge. _Next design should add chamfers to these parts._
 
@@ -186,33 +186,33 @@ _It would be nice to make some kind of identification marks on the shafts ot mak
 
 ## Mount the Gearbox and Frame
 Move couple M8 nuts and washers down the M8 rods. If you bothered to print the M8 cylinder you can move two nuts in one go.
-![[images/Pasted image 20241026113921.png]]
+![Alt text](images/Pasted image 20241026113921.png)
 
 Put gearbox on top, add the spacers and a washer with coupe nuts on the bottom rod. Put the first shaft (the shortest 41.40mm one) before screwing it the purple part and mount it top of the gearbox.
-![[images/Pasted image 20241026120724.png]]
+![Alt text](images/Pasted image 20241026120724.png)
 As I mentioned above, the hole in RadialCrank element turned out too small to fit the head of my M3 nuts. I used 6mm drill to widen it. There will be no force tearing this plate off, but it is better not to drill it through (like I almost have done). _Next design iteration should fix this little bug._
 ### Legs
 Next step is to assemble the legs. Use plenty of grease on all the axes and on the faces of the yellow levers around the large hole.
-![[images/Pasted image 20241026115237.png]]
+![Alt text](images/Pasted image 20241026115237.png)
 
 The covers just nap into place.
-![[images/Pasted image 20241026120505.png]]
+![Alt text](images/Pasted image 20241026120505.png)
 
 Put the grey inserts, grease it all.
-![[images/Pasted image 20241026120555.png]]
+![Alt text](images/Pasted image 20241026120555.png)
 
 ### Mount the First Leg Pair
 Normally all just slides into place. In my case PETG inserts were probably over-extruded a bit, it took quite some force to push them down the square shaft, but it worked. _You better calibrate your PETG and PLA-CF extrusion and/or add tolerances_. Again, don't forget to grease the inserts.
-![[images/Pasted image 20241026121206.png]]
+![Alt text](images/Pasted image 20241026121206.png)
 
 ### The crankshaft
 Now it is time to glue the shaft together. I used some contact glue to fix the ChordCranks together. They are all identical, just make sure the square holes are aligned. _A better design would include some alignment pins I guess_.
 
 Here is the final result:
-![[images/Pasted image 20241026121806.png]]
+![Alt text](images/Pasted image 20241026121806.png)
 
 On the photo blow I have put all elements of the crankshaft together just to give you an idea how it looks like inside the mechanism. To continue the assembly process you obviously only need one element in place so **the photo below is for illustration purposes only and is not a real assembly step**.
-![[images/Pasted image 20241026121633.png]]
+![Alt text](images/Pasted image 20241026121633.png)
 
 ### Assemble Two Remaining Leg Pairs
 I guess it is straightforward to assemble and mount the remaining two pairs of legs.
@@ -221,28 +221,28 @@ I guess it is straightforward to assemble and mount the remaining two pairs of l
 * Note there are no stoppers and nothing stops the shaft from slipping away. It was not a problem for me in practice, the shafts fit just right and do not slip away. _A better design would include some stoppers and/or side screws to fix the shafts in place_.
 
 Here is a photo of 2nd pair of legs mounted.
-![[images/Pasted image 20241026122155.png]]
+![Alt text](images/Pasted image 20241026122155.png)
 
 ### The Last Step
 Finally, you add:
 * longer black spacers (one piece per M8 rod),
 * the last crank shaft,
 * another couple of M8 nuts and a washer on the bottom M8 rod.
-![[images/Pasted image 20241026123921.png]]
+![Alt text](images/Pasted image 20241026123921.png)
 
 I don't have photos of the assembly process of the green plates, because those were made at the very beginning of this project. Just snap the ball bearing inplace and secure with the ring and 3 screws.
 
 Finally, mount the green plate on the M8 rods, push the outer end of the purple crankshaft into the ball bearing, and fix the purple washer with another screw.
-![[images/Pasted image 20241026140831.png]]
+![Alt text](images/Pasted image 20241026140831.png)
 ### Assembled View
 Here how it looks in the horizontal position:
-![[images/Pasted image 20241026124621.png]]
+![Alt text](images/Pasted image 20241026124621.png)
 
 With electronics (the serial links to the ODrives are not attached):
-![[images/Pasted image 20241026142441.png]]
+![Alt text](images/Pasted image 20241026142441.png)
 
 Fully assembled and switched on:
-![[images/Pasted image 20241026142533.png]]
+![Alt text](images/Pasted image 20241026142533.png)
 
 ## Electronics
 I might document the electronic part later in greater details, but on the high level it consists of:
