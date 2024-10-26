@@ -12,15 +12,17 @@ And as far as any intellectual property (accidentally) created by me goes -- I a
 2. you will not use it for any military purposes.
 Make robots, not war!
 
-The STEP files are here: [Fusion 360 models]().
-The printable files 3MF files are here: [Printable 3MF files]().
+The STEP files are here: [Fusion 360 models](https://github.com/abbbe/carpentopod-v43/tree/main/STP).
+The printable files 3MF files are here: [Printable 3MF files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF).
 You can play with 3D render of the model here on [Autodesk site](https://a360.co/3A7hhCD).
 
-I have also uploaded a short video clip of the thing walking (back and forth) on YouTube here: ![](https://youtu.be/CmKUDVRABEs)
+I have also uploaded a short video clip of the thing walking (back and forth) on YouTube []here(https://youtu.be/CmKUDVRABEs).
+
 # Design
 ## Linkage
 I have turned the original linkage diagram black and white for easier printing and named each joint.
-![Alt text](images/Pasted image 20241026052440.png)
+![Linkage Diagram](images/Pasted%20image%2020241026052440.png)
+
 ## Legs
 The first part I designed was a leg. I have made an attempt to parameterise the design. I was not obvious what units Giliam's diagram used exactly, so I have included a scaling factor which I can tune size the model for my printer.
 ![Alt text](images/Pasted image 20241026052941.png)
