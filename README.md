@@ -1,6 +1,10 @@
 # Credits
 
-This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam De Carpenter, all the credits should go to him.
+This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam de Carpenter, all the credits should go to him.
+
+# Community
+
+I have created a [thread](https://discord.com/channels/1299814326185627702/1300201396834140271) on Giliam's Discord server, if you have any questions feel free to ask there. Or create GitHub issue or a pull request.
 
 # Downloadable Content
 
