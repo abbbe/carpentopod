@@ -1,6 +1,6 @@
 # Credits
 
-This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam De Carpenterll, all the credits should go to him.
+This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam De Carpenter, all the credits should go to him.
 
 # Downloadable Content
 
