@@ -11,9 +11,11 @@ I am also sharing [3MF files](https://github.com/abbbe/carpentopod-v43/tree/main
 
 An interactive 3D model is available on [Autodesk site](https://a360.co/3A7hhCD).
 
-Here is a screen recording of [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8). Done from different view angles, with some legs and plates removed to make crankshaft movements visible.
+Here is a screen recording of [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8) on YouTube. Done from different view angles, with some legs and plates removed to make crankshaft movements visible.
 
-Here is a short video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) in the real world.
+Here is a short YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) in the real world.
+
+The same models are also published on [Printables](https://www.printables.com/model/1052837-carpentopod-v43).
 
 # Intro
 
