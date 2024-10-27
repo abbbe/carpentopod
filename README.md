@@ -4,7 +4,7 @@ This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentop
 
 # Downloadable Content
 
-Here are all [Fusion 360 model files](https://github.com/abbbe/carpentopod-v43/tree/main/STP) in STEP format. The full assembly is called "Two Halves" (see "Design" section belwo for more details).
+Here are all [Fusion 360 model files](https://github.com/abbbe/carpentopod-v43/tree/main/STP) in STEP format. The full assembly is called "Two Halves" (see "Design" section below for more details).
 <img width="667" alt="image" src="https://github.com/user-attachments/assets/1663a62c-c24d-4b76-b383-875c0ec470a5">.
 
 I am also sharing [3MF files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF), made in OrcaSlicer, tested on Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details). You can also generate your own STL files from the STEP files.
