@@ -1,25 +1,32 @@
+# Credits
+
+This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam De Carpenterll, all the credits should go to him.
+
+# Downloadable Content
+
+Here are all [Fusion 360 model files](https://github.com/abbbe/carpentopod-v43/tree/main/STP) in STEP format. The full assembly is called "Two Halves" (see "Design" section belwo for more details).
+<img width="667" alt="image" src="https://github.com/user-attachments/assets/1663a62c-c24d-4b76-b383-875c0ec470a5">.
+
+I am also sharing [3MF files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF), made in OrcaSlicer, tested on Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details). You can also generate your own STL files from the STEP files.
+
+An interactive 3D model is available on [Autodesk site](https://a360.co/3A7hhCD).
+
+Here is a screen recording of [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8). Done from different view angles, with some legs and plates removed to make crankshaft movements visible.
+
+Here is a short video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) in the real world.
+
 # Intro
+
 I have been playing with Fusion 360 and various linkages for couple months when I saw a video of [Carpentopod](https://www.decarpentier.nl/carpentopod) published by Giliam De Carpenter. He was kind enough to release exact linkage dimensions. I figured it could be a nice Fusion 350 challenge to design the mechanism behind the scene.
 
 As you will see below, I have focused mostly on the mechanical side of, not the artistic value of the piece. There is rudimentary electronics curcuitry and firmware to control it, I have described it on the high level at the end of the document.
 
 At this point as I have no particular plans to continue with this project. If you found this design entertaining or useful, I will be happy to hear about it. Feel free to contact me if you have any questions.
 
-It goes without saying all the credits go to Giliam. If you are going to commercialise the idea, do contact him.
-
-# Released Content
-And as far as any intellectual property (accidentally) created by me goes -- I am licensing it away under two very strict conditions:
-1. you put a star to this Github repo,
-2. you will not use it for any military purposes.
-Make robots, not war!
-
-The STEP files are here: [Fusion 360 models](https://github.com/abbbe/carpentopod-v43/tree/main/STP).
-The printable files 3MF files are here: [Printable 3MF files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF).
-You can play with 3D render of the model here on [Autodesk site](https://a360.co/3A7hhCD).
-
-I have also uploaded a short video clip of the thing walking (back and forth) on YouTube [here](https://youtu.be/CmKUDVRABEs).
+And as far as any intellectual property (accidentally) created by me goes -- I am licensing it away under two conditions: (1) you put a star to this Github repo and (2) you will not use it for any military purposes. **Make robots, not war!**
 
 # Design
+
 ## Linkage
 I have turned the original linkage diagram black and white for easier printing and named each joint.
 ![Linkage Diagram](images/Pasted%20image%2020241026052440.png)
