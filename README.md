@@ -1,3 +1,23 @@
+# Table of Contents
+- [Credits](#credits)
+- [Community](#community)
+- [Downloadable Content](#downloadable-content)
+- [Intro](#intro)
+- [Design](#design)
+  - Linkage
+  - Legs
+  - Leg Pair + Frame and Crank
+  - Frame and Crank
+  - Gearbox and Frame
+  - Crank
+  - Six Legs
+  - Full Assembly
+  - Editable Design Files
+- [Printing](#printing)
+- [Assembly](#assembly)
+- [Electronics](#electronics)
+- [Firmware](#firmware)
+
 # Credits
 
 This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam de Carpenter, all the credits should go to him.
@@ -48,12 +68,16 @@ The design is as simplistic as it gets, I have made no attempt to replicate beau
 
 To keep things 3D-printable I had to make a separate spacer:
 ![Alt text](images/Pasted%20image%2020241026053802.png)
-I have randomly chosen the thickness of the larger levers (AE, BD) to be 10mm. It means levers CH and FH became 2.5mm thick (there was no spacing in between the levers, but there is spacing between the yellow levers and the red plates). This turned out to be a bad choice, because when I 3D-printed it using normal 0.20 layer height, the slicer makes it slightly bigger, something like 2.60. Not a big deal as such, but 4 levers stacked together (combined with other artefacts of 3D printing process) became too thick. I worked around this issue by printing using 0.16mm layer height. 
+I have randomly chosen the thickness of the larger levers (AE, BD) to be 10mm. It means levers CH and FH became 2.5mm thick (there was no spacing in between the levers, but there is spacing between the yellow levers and the red plates). This turned out to be a bad choice, because when I 3D-printed it using normal 0.20 layer height, the slicer makes it slightly bigger, something like 2.60. Not a big deal as such, but 4 levers stacked together (combined with other artefacts of 3D printing process) became too thick. I worked around this issue by printing using 0.16mm layer height.
+
 ## Leg Pair + Frame and Crank
+
 Next I have put together a pair of legs.
 ![Alt text](images/Pasted%20image%2020241026053454.png)
 H1-H1 joint is connecting H joints of the legs. Other joints you see on the picture is my way to help stacking the leg pairs later down the road. There is another design included into this file called Frame and Crank. Left, Right and Crank joints link the pair of legs to corresponding sketch points of that design.
+
 ## Frame and Crank
+
 I have made a separate design file in attempt to work around lack of shared parameters in Fusion. It includes two sketches and no bodies.
 
 Left, right and bottom circle on Frame sketch are the horizontal M8 rods which link the whole thing together. I have actually had another rod on the top, but eventually dropped it. The central circle is the motor shaft (point I).
@@ -62,10 +86,13 @@ The Crank sketch contains a circle positioned same place as the central circle (
 ![Alt text](images/Pasted%20image%2020241026055336.png)
 
 This Frame and Crank design file is included into other design files. Unfortunately at some point I have edited the this design without properly updating other design files. If I do it now things fall apart. I am not sure how this problem can be resolved.
+
 ## Gearbox and Frame
+
 Next design file includes the motor and a large plate to fix it on. I have used [OpenQDD v1 actuators](https://www.aaedmusa.com/projects/openqdd) designed by Aaed Musa (slightly adapted to use MKS ODrive Mini). These mighty things are probably overkill for this project, but I have just built a pair and had no better use for it yet.
 
 ![Alt text](images/Pasted%20image%2020241026060032.png)
+
 ## Crank
 And here comes probably the most complicated part of my design, the crankshaft. I have spent probably a week trying to figure it out, then printed something rather ugly survived just long enough to allow me to come up with rather nice design I think. It  consists of just 3 unique elements.
 
@@ -80,6 +107,7 @@ Six inserts. ![Alt text](images/Pasted%20image%2020241026061626.png)
 I was not sure if plastic will be strong enough, so I have chosen 8mm square shafts. I figured I can just use metal rods from any DIY store if 3D printed parts do not hold.
 
 Originally the shaft were in this design too, but the length of the two of the shafts actually depends on other elements, so I have moved them to the next file.
+
 ## Six Legs
 
 Finally, all of the above are assembled together:
@@ -97,10 +125,12 @@ The piece which gets attached to the motor is called CombinedDriveCrank. It is a
 **Note the hole on the elevated part of this element is larger than two other M3 holes. It was mean to accommodate a head of M3 screw. It has turned out to be too small for my screw. Consider resizing it to 6mm or something.**
 
 ## Full Assembly
+
 And here are just two halves joined together.
 ![Alt text](images/Pasted%20image%2020241026064947.png)
 
-## Design Files
+## Editable Design Files
+
 All the design files are published in in STP/ folder:
 ```
 Leg v30.step
@@ -114,6 +144,7 @@ M8 Cylinder v1.step
 ```
 
 # Printing
+
 See in 3MF/ folder:
 ```
 Levers PLA YELLOW.3mf
@@ -128,6 +159,7 @@ M8 Cylinder v1.3mf
 If you need parts for both halves, you have to print all all these 3MF files twice (except the M8 cylinder tool).
 
 STP files for OpenQDD v1 are published on [Aaed Musa website](https://www.aaedmusa.com/projects/openqdd). As I mentioned above, this is an overkill by a large stretch, a simple DC motor with a gearbox should do just fine.
+
 ## Leg Levers
 
 "Levers PLA YELLOW.3mf". I printed it in Bambu PLA Basic Red.
@@ -137,6 +169,7 @@ STP files for OpenQDD v1 are published on [Aaed Musa website](https://www.aaedmu
 ![Alt text](images/Pasted%20image%2020241026070153.png)
 
 ## Leg Plates
+
 "Leg Plates PLA RED.3mf" also gives you 3 pairs of legs. I printed it in Bambu PLA Basic Red using standard "0.20 Strength" profile with random seams.
 
 Coulpe remarks:
@@ -145,6 +178,7 @@ Coulpe remarks:
 ![Alt text](images/Pasted%20image%2020241026070519.png)
 
 ## The crankshaft
+
 "Crank PURPLE PLA-CF.3mf" was printed in purple Bambu PLA-CF, using default "0.20 Strength" profile with random seams and 100% infill.
 ![Alt text](images/Pasted%20image%2020241026071620.png)
 
@@ -156,19 +190,24 @@ Coulpe remarks:
 When assembling you will be using two smaller spacer back to back in between the leg pairs. Next iteration of the design should probably have them merged to reduce number of parts.
 
 ## Inserts
+
 "Inserts PETG-HF GREY.3mf" - printed in Bambu PETG-HF using default "0.20 Strength" process with random seams.
 
 ![Alt text](images/Pasted%20image%2020241026072942.png)
 
 ## Green Plates
+
 "Outer Plate PLA GREEN.3mf" and " Gearbox Frame PLA GREEN.3mf" are the elements I am the least proud of. Printed in green Bambu PLA Basic using default "0.20 Strength" process with random seams.
 ![Alt text](images/Pasted%20image%2020241026073717.png)
 
 ![Alt text](images/Pasted%20image%2020241026111514.png)
 
 # Assembly
+
 The assembly process is rather straightforward. I have started documenting it towards the end of the project and only made photos of the assembly of one half. Please forgive the not so clean background.
+
 ### Preparation
+
 Here we have a bunch of 3D printed parts:
 ![Alt text](images/Pasted%20image%2020241026113001.png)
 Some weird optical illusion make the photo appear trapezoid, but it is a rectangle I swear ;).
@@ -201,13 +240,16 @@ You also want to sort the the purple square shafts by length:
 _It would be nice to make some kind of identification marks on the shafts ot make them all same length_.
 
 ## Mount the Gearbox and Frame
+
 Move couple M8 nuts and washers down the M8 rods. If you bothered to print the M8 cylinder you can move two nuts in one go.
 ![Alt text](images/Pasted%20image%2020241026113921.png)
 
 Put gearbox on top, add the spacers and a washer with coupe nuts on the bottom rod. Put the first shaft (the shortest 41.40mm one) before screwing it the purple part and mount it top of the gearbox.
 ![Alt text](images/Pasted%20image%2020241026120724.png)
 As I mentioned above, the hole in RadialCrank element turned out too small to fit the head of my M3 nuts. I used 6mm drill to widen it. There will be no force tearing this plate off, but it is better not to drill it through (like I almost have done). _Next design iteration should fix this little bug._
-### Legs
+
+## Legs
+
 Next step is to assemble the legs. Use plenty of grease on all the axes and on the faces of the yellow levers around the large hole.
 ![Alt text](images/Pasted%20image%2020241026115237.png)
 
@@ -217,11 +259,13 @@ The covers just nap into place.
 Put the grey inserts, grease it all.
 ![Alt text](images/Pasted%20image%2020241026120555.png)
 
-### Mount the First Leg Pair
+## Mount the First Leg Pair
+
 Normally all just slides into place. In my case PETG inserts were probably over-extruded a bit, it took quite some force to push them down the square shaft, but it worked. _You better calibrate your PETG and PLA-CF extrusion and/or add tolerances_. Again, don't forget to grease the inserts.
 ![Alt text](images/Pasted%20image%2020241026121206.png)
 
-### The crankshaft
+## The crankshaft
+
 Now it is time to glue the shaft together. I used some contact glue to fix the ChordCranks together. They are all identical, just make sure the square holes are aligned. _A better design would include some alignment pins I guess_.
 
 Here is the final result:
@@ -230,7 +274,8 @@ Here is the final result:
 On the photo blow I have put all elements of the crankshaft together just to give you an idea how it looks like inside the mechanism. To continue the assembly process you obviously only need one element in place so **the photo below is for illustration purposes only and is not a real assembly step**.
 ![Alt text](images/Pasted%20image%2020241026121633.png)
 
-### Assemble Two Remaining Leg Pairs
+## Assemble Two Remaining Leg Pairs
+
 I guess it is straightforward to assemble and mount the remaining two pairs of legs.
 * In between the leg pairs go black PLA spacers. Two spacers go on each M8 rod one after another. _There is no good reason for it and an improved design should have these two spacers merged I guess._
 * The second shaft is the longest one (46.40mm) and the last one is the shortest one (43.40mm).
@@ -239,7 +284,8 @@ I guess it is straightforward to assemble and mount the remaining two pairs of l
 Here is a photo of 2nd pair of legs mounted.
 ![Alt text](images/Pasted%20image%2020241026122155.png)
 
-### The Last Step
+## The Last Step
+
 Finally, you add:
 * longer black spacers (one piece per M8 rod),
 * the last crank shaft,
@@ -250,7 +296,8 @@ I don't have photos of the assembly process of the green plates, because those w
 
 Finally, mount the green plate on the M8 rods, push the outer end of the purple crankshaft into the ball bearing, and fix the purple washer with another screw.
 ![Alt text](images/Pasted%20image%2020241026140831.png)
-### Assembled View
+
+## Fully Assembled View
 Here how it looks in the horizontal position:
 ![Alt text](images/Pasted%20image%2020241026124621.png)
 
@@ -260,7 +307,8 @@ With electronics (the serial links to the ODrives are not attached):
 Fully assembled and switched on:
 ![Alt text](images/Pasted%20image%2020241026142533.png)
 
-## Electronics
+# Electronics
+
 I might document the electronic part later in greater details, but on the high level it consists of:
 * 22.2V Lipo battery with XT60 connector
 	* Aliexpress [HRB Lipo Battery 6S 5000mah](https://www.aliexpress.com/item/4000389770504.html?spm=a2g0o.order_list.order_list_main.71.22b418023OYCrn)
@@ -281,7 +329,7 @@ I might document the electronic part later in greater details, but on the high l
 
 The LOLIN D32 / DC-DC converter / the batteries / the cabling -- all is screwed/velcroed to a  platform hanging in between the M8 rods.
 
-## Firmware
+# Firmware
 
 The firmware is based on [Bluepad32](https://gitlab.com/ricardoquesada/esp-idf-arduino-bluepad32-template.git). I have forked their repo and pushed my code into carpentopod-v43 branch. To build it [install ESP-IDF 4.4 framework](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/get-started/index.html), then do the following fetch my branch, build it, flash into ESP32, and run serial console monitor:
 ```
