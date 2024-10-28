@@ -331,9 +331,9 @@ The LOLIN D32 / DC-DC converter / the batteries / the cabling -- all is screwed/
 
 # Firmware
 
-The firmware is based on [Bluepad32](https://gitlab.com/ricardoquesada/esp-idf-arduino-bluepad32-template.git). I have forked their repo and pushed my code into carpentopod-v43 branch.
+The source code is published [here](https://gitlab.com/abbbe/bluepad-32-carpentopod-v-43/-/tree/carpentopod-v43?ref_type=heads), in the 'carpentopod-v43' branch of my fork of [Bluepad32](https://gitlab.com/ricardoquesada/esp-idf-arduino-bluepad32-template.git) repo.
 
-To build the firmware [install ESP-IDF 4.4 framework](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/get-started/index.html) first. Then do the following to fetch my branch, build it, flash into ESP32, and run serial console monitor:
+To build the firmware [install ESP-IDF 4.4 framework](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/get-started/index.html) first (ESP-IDF command line tools worked for me on Windows 11). Then do the following to fetch my branch, build it, flash into ESP32, and run serial console monitor:
 ```
 git clone --recursive -b carpentopod-v43 https://gitlab.com/abbbe/bluepad-32-carpentopod-v-43.git
 cd bluepad-32-carpentopod-v-43
@@ -343,17 +343,21 @@ idf.py build flash monitor
 If things don't work use hello_world project from ESP-IDF repo to troubleshoot your setup.
 
 The following files were modified/added:
+
 * main/sketch.cpp - existing file, calls couple functions defined in carpentopod.h from existing setup(), loop(), and processGamepad() functions.
 * main/carpentopod.* - new file, manages ODrive's idle/running state, tranlsates joystick readings to velocity commands.
 * main/odrive.* - new file, talks to ODrives over USARTs.
 
 The firmware does the following:
-* Initializes ODrives
-* If Gamepad controller is connected, it translates Y axes of left and right joystick readings (-512 to +512) to velocity commands. This is done by dividing the readings by 100 which, so ODrives go up to around 5 RPMs on full throttle.
-* If Gamepad controller get disconnected, it switches ODrives to idle state.
+
+* Initializes BLE controller and waits for a game controller to pair. This code comes from the upstream repo.
+* Initializes ODrives and puts them in idle mode.
+* If a controller is connected, it translates readings for Y axes of left and right joysticks to ODrive velocity commands. This is done by dividing the readings (-512 to +512 range) by 100, so ODrives go up to around 5 RPMs on full throttle.
+* If a controller get disconnected, it switches ODrives to idle state.
 * Monitors battery voltage and halts the system if voltage drops below safe value. _Ideally it should raise some alarms and put the system into deep sleep. Doable for ESP32, but ODrives do not support deep sleep._ 
 
 Some remarks:
+* The firmware contains tons of redundant code. Any game controller, a bluetooth mouse, a keyboard trying to join it will be accepted (but only game controller joystick events will be used).
 * I could not figure out how to use Bluepad32 on my M1-based Macbook Pro - installation of ESP-IDF 4.4 fails there. Used Windows 11 instead.
 * I used the [offline installer](https://objects.githubusercontent.com/github-production-release-asset-2e65be/342348458/8d0419b3-daf4-496a-97cf-b81cf14f8095?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20241020%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241020T095018Z&X-Amz-Expires=300&X-Amz-Signature=f52cd7ab3df60e30b361044a04adcc3b42f47ff7e4f7fc85b68b0381f551533c&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Desp-idf-tools-setup-offline-4.4.8.exe&response-content-type=application%2Foctet-stream).
 * PlatformIO did not work for me, my guess ESP-IDF 4.4 is too old, but I am not sure. VSCode with ESP-IDF plugin works just fine, but you don't really need VSCode if you don't plan to edit code, command line tools which come with ESP-IDF 4.4 are enough.
