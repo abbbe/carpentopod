@@ -282,13 +282,23 @@ I might document the electronic part later in greater details, but on the high l
 The LOLIN D32 / DC-DC converter / the batteries / the cabling -- all is screwed/velcroed to a  platform hanging in between the M8 rods.
 
 ## Firmware
-The current firmware is rather rudimentary and only does the following:
-* Initialises the ODrives,
-* Prints the battery voltage (as seen by ODrive),
-* Moves the whole thing back and forth (or rotates in place) in a loop.
 
-Before I give up on this project plan to:
-* Link to Nintendo game console controls, to independently control the motors. I have already flashed Bluepad32 to another LOLIN D32. It receives joysticks positions just fine and it is a matter of translating these values to ODrive velocity commands.
-* Detect battery voltage drops below a safe value, put motors idle mode and beep (I will use [AZDelivery 3X KY-012 Active Piezo Buzzer](https://www.amazon.fr/dp/B07DPS2XDT?ref=ppx_yo2ov_dt_b_fed_asin_title)).
+The firmware is based on [Bluepad32](https://gitlab.com/ricardoquesada/esp-idf-arduino-bluepad32-template.git). I have forked their repo and pushed my code into carpentopod-v43 branch. To build it [install ESP-IDF 4.4 framework](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/get-started/index.html), then do the following fetch my branch, build it, flash into ESP32, and run serial console monitor:
+```
+git clone --recursive -b carpentopod-v43 https://gitlab.com/abbbe/bluepad-32-carpentopod-v-43.git
+cd bluepad-32-carpentopod-v-43
+idf.py build flash monitor
+```
+
+The firmware does the following:
+* Initializes ODrives
+* If Gamepad controller is connected, it translates Y axes of left and right joystick readings (-512 to +512) to velocity commands. This is done by dividing the readings by 100 which, so ODrives go up to around 5 RPMs on full throttle.
+* If Gamepad controller get disconnected, it switches ODrives to idle state.
+* Monitors battery voltage and halts the system if voltage drops below safe value. _Ideally it should raise some alarms and put the system into deep sleep. Doable for ESP32, but ODrives do not support deep sleep._ 
+
+Some remarks:
+* I could not figure out how to use Bluepad32 on my M1-based Macbook Pro - installation of ESP-IDF 4.4 fails there. Used Windows 11 instead.
+* I used the [offline installer](https://objects.githubusercontent.com/github-production-release-asset-2e65be/342348458/8d0419b3-daf4-496a-97cf-b81cf14f8095?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20241020%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241020T095018Z&X-Amz-Expires=300&X-Amz-Signature=f52cd7ab3df60e30b361044a04adcc3b42f47ff7e4f7fc85b68b0381f551533c&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Desp-idf-tools-setup-offline-4.4.8.exe&response-content-type=application%2Foctet-stream).
+* PlatformIO did not work for me, my guess ESP-IDF 4.4 is too old, but I am not sure. VSCode with ESP-IDF plugin works just fine, but you don't really need VSCode if you don't plan to edit code, command line tools which come with ESP-IDF 4.4 are enough.
 
 THE END.
