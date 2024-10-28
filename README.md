@@ -331,12 +331,21 @@ The LOLIN D32 / DC-DC converter / the batteries / the cabling -- all is screwed/
 
 # Firmware
 
-The firmware is based on [Bluepad32](https://gitlab.com/ricardoquesada/esp-idf-arduino-bluepad32-template.git). I have forked their repo and pushed my code into carpentopod-v43 branch. To build it [install ESP-IDF 4.4 framework](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/get-started/index.html), then do the following fetch my branch, build it, flash into ESP32, and run serial console monitor:
+The firmware is based on [Bluepad32](https://gitlab.com/ricardoquesada/esp-idf-arduino-bluepad32-template.git). I have forked their repo and pushed my code into carpentopod-v43 branch.
+
+To build the firmware [install ESP-IDF 4.4 framework](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/get-started/index.html) first. Then do the following to fetch my branch, build it, flash into ESP32, and run serial console monitor:
 ```
 git clone --recursive -b carpentopod-v43 https://gitlab.com/abbbe/bluepad-32-carpentopod-v-43.git
 cd bluepad-32-carpentopod-v-43
 idf.py build flash monitor
 ```
+
+If things don't work use hello_world project from ESP-IDF repo to troubleshoot your setup.
+
+The following files were modified/added:
+* main/sketch.cpp - existing file, calls couple functions defined in carpentopod.h from existing setup(), loop(), and processGamepad() functions.
+* main/carpentopod.* - new file, manages ODrive's idle/running state, tranlsates joystick readings to velocity commands.
+* main/odrive.* - new file, talks to ODrives over USARTs.
 
 The firmware does the following:
 * Initializes ODrives
