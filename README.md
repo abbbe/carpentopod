@@ -26,7 +26,7 @@
 * Added a M8 nut which hides under the outter black spacers, to make the frame more rigid.
 * Added rounded shoes (printed in PETG), to let feet slide sideways during turns.
 
-All these changes (except chamfer of the cranks) is in the latest version of STEP models. I did not update 3MF files, but added STLs for the feet.
+All these changes (except chamfer of the cranks) is in the latest version of STEP models.
 
 # Credits
 
@@ -34,16 +34,16 @@ This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentop
 
 # Useful Content
 
-Here is a Youtube clip of the [thing walking controled via Nintendo controller](https://youtu.be/jmLX-odWrtY). The older YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) is still on YouTube too.
+Here is a Youtube clip of the [thing walking steered using Nintendo controller](https://youtu.be/jmLX-odWrtY). The older YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) is still on YouTube too.
 
 The latest Fusion 360 models in STEP format is uploaded into [STP/ folder on GitHub](https://github.com/abbbe/carpentopod-v43/tree/main/STP). Normally the STEP file includes all the subcomponents. (If you want individual models of the elements described in "Design" section, check previous commits). Once you open the model you should get something like this:
 ![Two Halves v7 - Thumbnail](images/Two%20Halves%20v7.png)
 
 An interactive 3D model is available on [Autodesk site](https://a360.co/3A7hhCD).
 
-Here is a screen recording of [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8) on YouTube. Done from different view angles, with some legs and plates removed to make crankshaft movements visible. I did not recreate it since the original upload, so there are no shoes. You can see those via the Autodesk link above.
+Here is a screen recording of [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8) on YouTube. Done from different view angles, with some legs and plates removed to make crankshaft movements visible. I did not recreate it since the original upload, so there are no shoes (you can see those via the Autodesk link above).
 
-There are [3MF and STL files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF), made in OrcaSlicer. Used on Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details). 
+Printable 3MF files are uploaded into [3MF/ folder](https://github.com/abbbe/carpentopod-v43/tree/main/3MF). Made in OrcaSlicer, used on Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details).
 
 The models are also published on [Printables](https://www.printables.com/model/1052837-carpentopod-v43).
 
