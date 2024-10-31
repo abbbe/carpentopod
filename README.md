@@ -34,7 +34,10 @@ This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentop
 
 # Useful Content
 
-Here is a Youtube clip of the [thing walking steered using Nintendo controller](https://youtu.be/jmLX-odWrtY). The older YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) is still on YouTube too.
+Here is a Youtube clip of the [thing walking steered using Nintendo controller](https://youtu.be/jmLX-odWrtY):
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jmLX-odWrtY/0.jpg)](https://www.youtube.com/watch?v=jmLX-odWrtY)
+
+The older YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) is still on YouTube too.
 
 The latest Fusion 360 models in STEP format is uploaded into [STP/](https://github.com/abbbe/carpentopod-v43/tree/main/STP) folder on GitHub. Normally the STEP file includes all the subcomponents. (If you want individual models of the elements described in "Design" section, check previous commits). Once you open the model you should get something like this: ![Two Halves v7 - Thumbnail](images/Two%20Halves%20v7.png)
 
