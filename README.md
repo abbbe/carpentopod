@@ -30,20 +30,21 @@ All these changes (except chamfer of the cranks) is in the latest version of STE
 
 # Credits
 
-This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam de Carpenter, all credits should go to him.
+This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam de Carpentier, all credits should go to him.
 
 # Useful Content
 
-Here is a Youtube clip of the [thing walking steered using Nintendo controller](https://youtu.be/jmLX-odWrtY). The older YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) is still on YouTube too.
+Here is a Youtube clip of the [thing walking steered using Nintendo controller](https://youtu.be/jmLX-odWrtY):
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jmLX-odWrtY/0.jpg)](https://www.youtube.com/watch?v=jmLX-odWrtY)
 
-The latest Fusion 360 models in STEP format is uploaded into the [STP/ folder on GitHub](https://github.com/abbbe/carpentopod-v43/tree/main/STP). Normally the STEP file includes all the subcomponents. (If you want individual models of the elements described in "Design" section, check previous commits). Once you open the model you should get something like this:
+The latest Fusion 360 models in STEP format is uploaded into the [STP/](https://github.com/abbbe/carpentopod-v43/tree/main/STP) folder on GitHub. Normally the STEP file includes all the subcomponents. (If you want individual models of the elements described in "Design" section, check previous commits). Once you open the model you should get something like this:
 ![Two Halves v7 - Thumbnail](images/Two%20Halves%20v7.png)
 
 An interactive 3D model is available on the [Autodesk site](https://a360.co/3A7hhCD).
 
 Here is a screen recording of the [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8) on YouTube. Done from different view angles, with some legs and plates removed to make the crankshaft movements visible. I did not recreate it since the original upload, so there are no shoes (you can see those via the Autodesk link above).
 
-Printable 3MF files are uploaded into the [3MF/ folder](https://github.com/abbbe/carpentopod-v43/tree/main/3MF). Made in OrcaSlicer, printed on a Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details).
+Printable 3MF files are uploaded into the [3MF/](https://github.com/abbbe/carpentopod-v43/tree/main/3MF) folder. Made in OrcaSlicer, printed on a Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details).
 
 The models are also published on [Printables](https://www.printables.com/model/1052837-carpentopod-v43).
 
