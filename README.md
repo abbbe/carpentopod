@@ -1,4 +1,5 @@
 # Table of Contents
+
 - [Credits](#credits)
 - [Community](#community)
 - [Downloadable Content](#downloadable-content)
@@ -18,28 +19,35 @@
 - [Electronics](#electronics)
 - [Firmware](#firmware)
 
+**Update 2024-10-31**
+
+* The square shafts were originally printed in PLA-CF, but two out of 3 get damaged very quickly. I have reassembled the whole thing using 8x8mm rods. Here in belgium these rods can be bought in the DIY stores. Have to cut them to size, see dimensions in the build log below.
+* Manually chamfered the round parts of the cranks, to make it less likely to collide with the bottop part of the legs.
+* Added a M8 nut which hides under the outter black spacers, to make the frame more rigid.
+* Added rounded shoes (printed in PETG), to let feet slide sideways during turns.
+
+All these changes (except chamfer of the cranks) is in the latest version of STEP models. I did not update 3MF files, but added STLs for the feet.
+
 # Credits
 
 This project was inspired by [Carpentopod](https://www.decarpentier.nl/carpentopod) created by Giliam de Carpenter, all the credits should go to him.
 
-# Community
+# Useful Content
 
-I have created a [thread](https://discord.com/channels/1299814326185627702/1300201396834140271) on Giliam's Discord server, if you have any questions feel free to ask there. Or create GitHub issue or a pull request.
+Here is a Youtube clip of the [thing walking controled via Nintendo controller](https://youtu.be/jmLX-odWrtY). The older YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) is still on YouTube too.
 
-# Downloadable Content
-
-Here are all [Fusion 360 model files](https://github.com/abbbe/carpentopod-v43/tree/main/STP) in STEP format. The full assembly is called "Two Halves" (see "Design" section below for more details).
-<img width="667" alt="image" src="https://github.com/user-attachments/assets/1663a62c-c24d-4b76-b383-875c0ec470a5">.
-
-I am also sharing [3MF files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF), made in OrcaSlicer, tested on Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details). You can also generate your own STL files from the STEP files.
+The latest Fusion 360 models in STEP format is uploaded into [STP/ folder on GitHub](https://github.com/abbbe/carpentopod-v43/tree/main/STP). Normally the STEP file includes all the subcomponents. (If you want individual models of the elements described in "Design" section, check previous commits). Once you open the model you should get something like this:
+![Two Halves v7 - Thumbnail](images/Two%20Halves%20v7.png)
 
 An interactive 3D model is available on [Autodesk site](https://a360.co/3A7hhCD).
 
-Here is a screen recording of [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8) on YouTube. Done from different view angles, with some legs and plates removed to make crankshaft movements visible.
+Here is a screen recording of [animation of the joint movements in Fusion 360](https://youtu.be/IclcQic5kn8) on YouTube. Done from different view angles, with some legs and plates removed to make crankshaft movements visible. I did not recreate it since the original upload, so there are no shoes. You can see those via the Autodesk link above.
 
-Here is a short YouTube video clip of the thing [walking (back and forth)](https://youtu.be/CmKUDVRABEs) in the real world.
+There are [3MF and STL files](https://github.com/abbbe/carpentopod-v43/tree/main/3MF), made in OrcaSlicer. Used on Bambu X1C with 0.4mm hardened steel nozzle (see the Printing section below for more details). 
 
-The same models are also published on [Printables](https://www.printables.com/model/1052837-carpentopod-v43).
+The models are also published on [Printables](https://www.printables.com/model/1052837-carpentopod-v43).
+
+I have created a [thread](https://discord.com/channels/1299814326185627702/1300201396834140271) on Giliam's Discord server, if you have any questions feel free to ask there. Or create GitHub issue or a pull request.
 
 # Intro
 
@@ -54,10 +62,12 @@ And as far as any intellectual property (accidentally) created by me goes -- I a
 # Design
 
 ## Linkage
+
 I have turned the original linkage diagram black and white for easier printing and named each joint.
 ![Linkage Diagram](images/Pasted%20image%2020241026052440.png)
 
 ## Legs
+
 The first part I designed was a leg. I have made an attempt to parameterise the design. I was not obvious what units Giliam's diagram used exactly, so I have included a scaling factor which I can tune size the model for my printer.
 ![Alt text](images/Pasted%20image%2020241026052941.png)
 
@@ -94,6 +104,7 @@ Next design file includes the motor and a large plate to fix it on. I have used 
 ![Alt text](images/Pasted%20image%2020241026060032.png)
 
 ## Crank
+
 And here comes probably the most complicated part of my design, the crankshaft. I have spent probably a week trying to figure it out, then printed something rather ugly survived just long enough to allow me to come up with rather nice design I think. It  consists of just 3 unique elements.
 
 Two **RadialCrankShaft**. One will be combined with the motor output in the next design. Another is meant to be glued with a little lever which plugs into a ball bearing on the outer plate.
@@ -216,20 +227,18 @@ They will go to into a half-assembled contraption.
 ![Alt text](images/Pasted%20image%2020241026112930.png)
 
 Above you can see the motors are mounted on the frames and 3x 500mm M8 rods. On top of this I will use a handful of fasteners:
-* 12x M8 regular nuts,
+* 16x M8 regular nuts,
 * 6x M8 nuts with plastic inserts,
-* 9x M8 washers,
-* 3x M3x6 screws (to attach purple crank to the output disk of the gearbox),
-* 8x self-threading 3.5x12mm screws (for the ball bearing fixture).
+* 9x large M8 washers,
+* 4x small M4 washers,
+* 3x M3x6 screws (to attach the output disk to the gearbox),
+* 8x self-threading 3.5x12mm screws (to fix the ball bearing).
 
 You will also need:
 * couple 13mm wrenches,
 * a screwdriver for your M3 screws,
 * grease (I used [APP ST 250 PTFE Dry Lubricant Aerosol PTFE Grease](https://www.amazon.fr/dp/B004AHMVOM/ref=sspa_dk_detail_2?psc=1&pd_rd_i=B004AHMVOM&pd_rd_w=nyWz9&content-id=amzn1.sym.d15aafde-9691-4d5f-85f2-056701d026bf&pf_rd_p=d15aafde-9691-4d5f-85f2-056701d026bf&pf_rd_r=7MGMT81QDTRC1AAFFD23&pd_rd_wg=B5cd6&pd_rd_r=16cb370e-badc-40b7-b058-b565330e0f72&s=industrial&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw)]),
 * deburring tool and 8mm drill bit.
-
-You might also want to print yourself a little tool to quickly move M8 nuts down the rods. I have made it for the very first iteration of the design which included an unhealthy amount of M8 nuts, but it is handy for assembly of this version too. Mine is printed in polycarbonate (just because I had a spool attached to the printer at that moment). But PLA should work just fine.
-![Alt text](images/Pasted%20image%2020241026114257.png)
 
 You will want to debur the holes in the yellow levers to the point they rotate nicely. In my case something went wrong with the yellow PLA levers and I had to do a lot of deburring and even use 8mm drill bit to enlarge. _Next design should add chamfers to these parts._
 
